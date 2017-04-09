@@ -1,0 +1,98 @@
+body{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    background-color: #cecece;
+    width: 100%;
+    height: 100%;
+}
+.cont{
+    min-height: 100%;
+    position: relative;
+}
+#logo{
+    width: 4em;
+    padding: 0;
+    margin: 0;
+    
+}
+.nav{
+    float: right;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+.nav li{
+    display: inline-block;
+}
+.nav li a{
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    padding: 1.4em 1em 1.4em 1em;
+    text-align: center;
+}
+.nav li a:hover{
+    color: #585858
+}
+.dropcont {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    list-style-type: none;
+}
+.dropcont li a{
+    text-align: center;
+}
+.dropdown:hover .dropcont{
+    display: block;
+}
+.active{
+    color: #585858
+}
+header{
+    position: fixed;
+    top: 0;
+    background-color: #ffffff;
+    margin: 0;
+    margin-bottom: 1em;
+    padding: 0;
+    width: 100%;
+    height: 10%; 
+    z-index: 50;
+}
+#box{
+    background-color: #ffffff;
+    width: 95%;
+    min-height: 70%;
+    position: absolute;
+    top: 12%;
+    left: 2.5%;
+    right: 2.5%;
+    padding-bottom: 6em;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    height: 5em;
+    width: 100%;
+    background-color: #cecece;
+}
+.fnav{
+    list-style-type: none;
+    margin: auto;
+    width: 25%;
+    padding: 2em;
+}
+.fnav li{
+    display: inline;
+}
+#email{
+    border-right: .1em solid;
+}
+.fnav li a{
+    padding: 1em;
+    text-align: center;
+}

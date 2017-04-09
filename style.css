@@ -1,0 +1,161 @@
+body{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    background-color: #cecece;
+    width: 100%;
+    height: 100%;
+}
+#logo{
+    width: 4em;
+    padding: 0;
+    margin: 0;
+    
+}
+.nav{
+    float: right;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+.nav li{
+    display: inline-block;
+}
+.nav li a{
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    padding: 1.4em 1em 1.4em 1em;
+    text-align: center;
+}
+.nav li a:hover{
+    color: #585858
+}
+.dropcont {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    list-style-type: none;
+}
+.dropcont li a{
+    text-align: center;
+}
+.dropdown:hover .dropcont{
+    display: block;
+}
+.active{
+    color: #585858
+}
+header{
+    position: fixed;
+    top: 0;
+    background-color: #ffffff;
+    margin: 0;
+    margin-bottom: 1em;
+    padding: 0;
+    width: 100%;
+    height: 5em; 
+    z-index: 50;
+}
+#box{
+    background-color: #ffffff;
+    width: 95%;
+    min-height: 70%;
+    position: absolute;
+    top: 12%;
+    left: 2.5%;
+    right: 2.5%;
+    padding-bottom: 6em;
+}
+
+.cwrapper{
+    margin: 3em;
+    height: 100%;
+    width 100%;
+    z-index: 51;
+}
+.cont{
+    position: relative;
+    float: left;
+    width:  25%;
+    height: 15em;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 52;
+}
+.cont:hover .fade{
+    opacity: .7;
+    cursor: pointer;
+}
+.fade{
+    position: absolute;
+    top: 0;    
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #000000;
+}
+.text{
+    color: #ffffff;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    height: 5em;
+    width: 100%;
+    background-color: #cecece;
+}
+.pop{
+    display: none;
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    width: 50%;
+    height: 60%;
+    padding: 2em;
+    background-color: #ffffff;
+    z-index:1002;
+    overflow: auto;
+}
+.black{
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    z-index:1001;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);
+}
+.fnav{
+    list-style-type: none;
+    margin: auto;
+    width: 25%;
+    padding: 2em;
+}
+.fnav li{
+    display: inline;
+}
+#email{
+    border-right: .1em solid;
+}
+.fnav li a{
+    padding: 1em;
+    text-align: center;
+}
