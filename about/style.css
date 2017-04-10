@@ -6,6 +6,7 @@ body{
     width: 100%;
     height: 100%;
 }
+
 #logo{
     position: relative;
     left: 2.5em;
@@ -79,100 +80,12 @@ header{
     padding-bottom: 6em;
 }
 
-.cwrapper{
-    margin: 3em;
-    height: 100%;
-    width 100%;
-}
-.cont{
-    position: relative;
-    float: left;
-    width:  25%;
-    height: 15em;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.cont:hover .fade{
-    opacity: .7;
-    cursor: pointer;
-}
-.fade{
-    position: absolute;
-    top: 0;    
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #000000;
-}
-.text{
-    color: #ffffff;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-}
 footer{
     position: absolute;
     bottom: 0;
     height: 5em;
     width: 100%;
     background-color: #f5f2ea;
-}
-.pop{
-    display: none;
-    position: absolute;
-    top: 15%;
-    left: 25%;
-    right: 25%;
-    width: 50%;
-    height: 60%;
-    padding: 2em;
-    background-color: #ffffff;
-    z-index:1002;
-    overflow: auto;
-}
-.popi{
-    width: 50%;
-    float: right;
-    padding-left: 1em;
-}
-.poptitle{
-    font-family: 'Playfair Display', serif;
-    text-align: center;
-    margin-bottom: 0;
-    font-size: 2em
-}
-.poptext{
-    float: right;
-    line-height: 1.5em;
-    text-indent: 1em;
-    font-size: 1.08em;
-    Font-family: 'Raleway', sans-serif;
-    
-}
-.link{
-    text-decoration: none;
-    font-size: .5em;
-}
-.black{
-    display: none;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background-color: #000000;
-    z-index:1001;
-    -moz-opacity: 0.8;
-    opacity:.80;
-    filter: alpha(opacity=80);
 }
 .fnav{
     list-style-type: none;
