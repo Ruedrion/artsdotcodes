@@ -136,7 +136,7 @@ footer{
     padding: 2em;
     background-color: #ffffff;
     z-index:1002;
-    overflow: auto;
+    overflow: hidden;
 }
 .popi{
     width: 50%;
@@ -147,7 +147,7 @@ footer{
     font-family: 'Playfair Display', serif;
     text-align: center;
     margin-bottom: 0;
-    font-size: 2em
+    font-size: 2em;
 }
 .poptext{
     float: right;
@@ -158,8 +158,10 @@ footer{
     
 }
 .link{
+    float: right;
     text-decoration: none;
-    font-size: .5em;
+    font-size: .7em;
+    color: #000000;
 }
 .black{
     display: none;
