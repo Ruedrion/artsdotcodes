@@ -158,6 +158,7 @@ footer{
     
 }
 .link{
+    Font-family: 'Raleway', sans-serif;
     float: right;
     text-decoration: none;
     font-size: .7em;
