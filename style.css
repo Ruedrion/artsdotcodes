@@ -207,7 +207,7 @@ footer{
 		display:inline-block;
 	}
 	#nav .nav, #nav:active .nav{ 
-		display: block;
+		display: none;
 		position: absolute;
 		background: #fff;
         padding: 0;
@@ -216,7 +216,6 @@ footer{
 		width: 36%;
 	}
     .nav .dropcont, .nav:active .dropcont{ 
-		display: block;
 		position: absolute;
 		background: #fff;
         padding: 0;
