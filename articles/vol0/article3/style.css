@@ -172,7 +172,7 @@ p a{
 .popquote{
     font-size: 1.5em;
     width: 45%;
-    float: right;
+    float: left;
     line-height: 1.1em;
     padding: .5em;
     text-align: left;
@@ -198,6 +198,10 @@ p a{
     margin: auto;
     max-width: 100%;
 }
+.imgs iframe{
+    width: 100%;
+    height: 37em
+}
 .imgs p{
     float: right;
     width: 12%;
@@ -211,6 +215,10 @@ p a{
     min-width: 85%;
     font-style: italic;
     font-family: 'Raleway', sans-serif;
+}
+.imgs cite a{
+    text-decoration: none;
+    color: #575757;
 }
 .img button{
     cursor: pointer;

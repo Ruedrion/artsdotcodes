@@ -1,16 +1,17 @@
 body{
-    font-family: 'Playfair Display', serif;
+    font-family: 'Raleway', sans-serif;
     position: absolute;
     padding: 0;
     margin: 0;
     background-color: #ffffff;
     width: 100%;
     height: 100%;
+    font-weight: 300;
 }
 #logo{
     position: relative;
-    left: .5em;
-    top: .5em;
+    left: 2.5em;
+    top: 1em;
     width: 11em;
     padding: 0;
     margin: 0;  
@@ -19,10 +20,10 @@ body{
     float: right;
     list-style-type: none;
     padding-right: 2.5em;
-    padding-top: .9em;
+    padding-top: 1.9em;
     margin: 0;
     background-color: #000000;
-    font-family: 'Raleway', sans-serif;
+    
 }
 .nav li{
     display: inline-block;
@@ -56,7 +57,7 @@ body{
     display: block;
 }
 #active a{
-    color: #6074a2;
+    color: #4d5961;
 }
 header{
     position: fixed;
@@ -66,58 +67,88 @@ header{
     margin-bottom: 1em;
     padding: 0;
     width: 100%;
-    height: 5em; 
+    height: 6em; 
+    z-index: 50;
+}
+#back{
+    position: fixed;
+    top: 50%;
+    width: 4em;
+    z-index: 50;
+}
+#back:hover{
+    cursor: pointer;
+}
+#for:hover{
+    cursor: pointer;
+}
+#for{
+    position: fixed;
+    top: 50%;
+    right: 0;
+    width: 4em;
     z-index: 50;
 }
 #box{
     background-color: #ffffff;
-    width: 90%;
+    width: 85%;
     min-height: 70%;
     position: absolute;
-    top: 8em;
-    left: 5%;
-    right: 5%;
+    top: 10em;
+    left: 7.5%;
+    right: 7.5%;
     padding-bottom: 6em;
 }
-
-.cwrapper{
-    margin: 3em;
-    height: 100%;
-    width 100%;
-}
-.cont{
-    position: relative;
-    float: left;
-    width:  25%;
-    height: 15em;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.cont:hover .fade{
-    opacity: .7;
-    cursor: pointer;
-}
-.fade{
-    position: absolute;
-    top: 0;    
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #000000;
-}
 .text{
-    color: #ffffff;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    padding: 2.5em;
+}
+.textwrap{
+    position: relative;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 1em;
+}
+.title{
+    text-align: center;
+    margin-top: 0;
+    font-size: 2em;
+    font-weight: 500;
+}
+.textwrap p{
+    line-height: 1.6em;
+    text-indent: 1em;
+    font-size: 1em;
+    color: #000000;
+    margin: auto;
+    width: 70%;
+    padding: 0;
+    padding-bottom: 1em;
+}
+p a{
+    text-decoration: none;
+    color: #575757;
+    font-weight: 600;
+}
+.img1{
+    margin: auto;
+    display: block;
+    width: 50%;
+    padding: .8em;
+}
+.img2{
+    margin: auto;
+    display: block;
+    width: 50%;
+    padding: .8em;
+}
+.quote{
+    font-size: .8em;
+    text-align: left;
+    text-indent: 0;
+}
+.credit{
+    border-top: .001em solid;
+    font-size: .9em;
 }
 footer{
     position: absolute;
@@ -125,19 +156,23 @@ footer{
     height: 5em;
     width: 100%;
     background-color: #ffffff;
-    text-align: center;
 }
-.social{
-    display: inline-block;
-    position: relative;
-    top: .8em;
+.fnav{
+    list-style-type: none;
+    margin: auto;
+    padding: 2em;
+    padding-left: 40%;
 }
-.social img{
-    width: 2.3em;
+.fnav li{
+    display: inline;
+    font-size: .9em;
 }
-.email{
+#email{
+    border-right: .1em solid;
+}
+.fnav li a{
     padding: 1em;
-    border-right: .02em solid;
+    text-align: center;
     text-decoration: none;
     color: #000000;
 }
@@ -148,7 +183,6 @@ footer{
     margin: 0;
     background-color: #000000;
     padding: 0;
-    font-family: 'Raleway', sans-serif;
 }
 
 #vnav ul{
@@ -162,12 +196,13 @@ footer{
 }
 #vnav li a{
     color: #ffffff;
+    
     display: block;
     padding: .7em;
     text-decoration: none;
 }
 #vnav li a:hover{
-    color: #6074a2;
+    color: #d30005
 }
 #vcont{
     padding: 0;

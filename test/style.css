@@ -96,8 +96,6 @@ header{
 }
 .cpage a{
     display: block;
-    color: #000000;
-    text-decoration: none;
 }
 #back{
     position: absolute;
@@ -291,7 +289,7 @@ p a{
     text-decoration: none;
 }
 #vnav li a:hover{
-    color: #6074a2;
+    color: #d30005
 }
 #vcont{
     padding: 0;

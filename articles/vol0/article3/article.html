@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>arts.codes</title>
+        <link rel="icon" href="img/artsdotcodeslogo.png" type="image/gif">
+        <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+     <link rel="stylesheet" type="text/css" href="style.css">
+     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:500|Playfair+Display|Raleway:300" rel="stylesheet">
+  </head>
+    
+    <body>
+      <header>
+            <a href="../../../index.html">
+                <img id="logo" src="img/logo.png" alt="arts.codes">
+            </a>
+          <ul class="nav">
+           <li class="dropdown"><a>Articles</a>
+           <ul class="dropcont">
+               <li><a href="../../../articles/vol0/article0/article.html">Calculating Music in the Middle Ages</a></li>
+               <li><a href="../../../articles/vol0/article1/article.html">Game Trak DIY v0.1</a></li>
+               <li><a href="../../../articles/vol0/article2/article.html">R. Luke Dubois</a></li>
+               <li><a></a></li>
+               <li><a></a></li>
+               <li><a></a></li>
+               <li><a></a></li>
+           </ul>
+           </li>
+           <li><a href="../../../blog/blog.html">Blog</a></li>
+            <li><a href="../../../about/about.html" rel="author">About</a></li>
+              <li><a href="https://github.com/artsdotcodes">Framework</a></li>
+              <li><a href="../../../other/more.html">More</a></li>
+          </ul>
+      </header>
+          <div class="cwrap"> 
+             <div id="back" class="cpage">
+              <a href="../article2/article.html"><img src="img/back.png" title="Previous"><i>Previous</i></a>
+              </div>
+              <div id="for" class="cpage">
+              <a href="../article4/article.html"><img src="img/forward.png" title="Next"><i>Next</i></a>
+              </div>
+              </div>
+          
+           <main id="box">
+           <article class="text">
+             
+               <p class="title">Allison MillerAllison Miller</p>
+               <p class="subhead">When I first got interested in information security, I was far more enamored of the “security” aspect of the equation</p>
+               <div class="textwrap">
+               <p>When I first got interested in information security, I was far more enamored of the “security” aspect of the equation, I never expected to spend so much of my career poring over raw data sets, and I definitely didn’t expect to be using statistics or behavioral modeling as part of my day-to-day. I think probably the deal was sealed when I read “TCP/IP Illustrated”, in utter fascination, and then started playing around with Snort and digging through PCAP data. It was all grep and maybe some perl (oh goodness, yes, perl), trying to sort the data to find the most interesting bits.</p>
+
+            <p>It wasn’t till a few years later though, that I was tasked with conducting analyses leveraging data pulled from a highly structured, but totally undocumented system (my treasured copy of the schema was a copy of a copy of a copy, with notes and tips from ghosts of analysts past), one of the largest production online databases. It was “big data” before “big data” was a thing, and the modeling work was mostly stats and supervised learning, but it essentially gets lumped into what’s known as machine learning. In any case, an analyst, investigator, and pattern <quote class="popquote"><b>"I wanted to try was to see what would emerge if we combined system-focused log data with observable behavior data"</b></quote>matcher by nature if not by training — I found myself down the rabbit hole big time. The use case was fraud, but fraud is only a half-step from security and I knew the techniques were extensible, even if the tools (SAS, SPSS, Matlab) were uncommon among the infosec set. But “R” was starting to get some traction, and the lessons learned in fighting spam, fraud, malware were starting to get applied to bots, trolls, hijackers, and even starting to show up elsewhere in network and enterprise IT toolkits — things were getting exciting. In fact some of new trends in analytics were emerging — like my favorite, graph theory. I was working in a kind of risk/fraud/security R&D capacity and we experimented with these techniques — we actually got a patent for a graph visualization system, a tool that made it easy to see relationships between entities and look for patterns across networks.</p> 
+
+            <p> What we developed is a tool and the algorithms that power it, it was useful, it helped us in our work.</p>
+
+<p>But it was also interesting, and beautiful.</p>
+
+<p>In technology — in operations, and business, and security — we have all of these tools, these different interfaces into data: data that’s moving. Data about the data. Metrics about the metrics. We have developed these tools as a window into a world that becomes as real and compelling and *solid* as the world around us right now. What I became interested is not just the data can tell us about the shape of reality, but what is the shape of the data that’s shaping us?</p>
+
+<p>When I heard about computational art, via Melissa Clarke’s “after the ice” project. I got very excited. What Melissa was doing was leveraging data — in this case web based scientific data, like bathymetry and ice core samples. It’s the same data that scientists use to model both present state and project future changes. A computational artist leverages some of the same tech and tools used by scientists, data analysts, or behavior researchers like us to project something completely different — not the future state, but an alternative state, a parallel experience. And that experience can cross mediums  – images, sculpture, video, and soundscapes.</p>
+
+<p>What I wanted to try was to see what would emerge if we combined system-focused log data with observable behavior data, essentially fusing underlying technology system to the social dynamics that accompany any interesting graph/network. This is the genesis of the háček multimedia art project that recently opened in New York at the O’Reilly Security Conference and is currently on display in the DC area, at the ShmooCon hacker con. I contacted Melissa and her colleague Meg Schedel, a composer and interactive media artist. Then I did some research and we compiled a corpus of interesting data sets that we might be able to use, including honeypot logs and malware samples — I was trying to find a CTF (capture the flag) capture set and thought the folks at the Shmoo Group, who I first met at DefCon when they were, in fact, aggregating CTF logs and providing them to researchers. In any case, Shmoo had something just as interesting, kind of their own version of a denial of service attack. Congratulations, attendees of ShmooCon 2016, you are the winners in the “capture the ticket” contest played live on the Shmoo Group’s servers. Those of you in the audience at 2017, it was an even faster and more competitive race.</p>
+
+<p>The initial process was to extract and prepare aggregated data so that it could be raw material for the artists. I think of this step as mixing up paints and making sure the canvases are ready. Data from the Shmoo webserver logs were pulled down into files for analysis, and each event entry was tagged according to the behavior being exhibited, there was some quick filtering too, to clean up the file. Then the file was parsed (using python) and some additional interpretation was done on the file to essentially convert it into a useful set of vectors so that it could be mapped into a physical or visual space, and the artists could manipulate the space or the dimensions, resulting in a different “surface” showing up.</p>
+
+<p>The háček project results were even cooler than I had hoped, the exhibit “opened” at the O’Reilly Security event in NYC and featured a soundscape, a 3D sculpture with digital components, and — a VR experience where attendees got a chance to “ride” the graph. Each art piece is “sculpted” out of the raw materials provided by the web server logs. The transmutation of event data into physical representations allows the audience to experience a “hack” as a space – that can be gauzy and ambiguous, stark and severe, or surprising and surreal – all at once.</p>
+
+<p>This initial experiment was a success and I’m looking forward to working on more projects with Melissa & Meg where we can drill into even more complex data sets, maybe even incorporating some what I’ve been studying related to econometrics and game theory. In security we get to study some of the most interesting behavioral patterns emerging in systems today, and there are stories hidden in that data that we’ll find, and explore, and share with you. </p>
+
+             <section class="credit">
+           <cite>Allison Miller<br>Allison Miller<br>arts.codes Vol 0</cite><br> 
+           <time datetime="20017-12-01">January 12th 20017</time> 
+          </section>
+        <div Class="footer">
+            <a class="email" href="mailto:team@arts.codes?subject=Contact">team@arts.codes</a>
+            <a class="social" href="https://www.instagram.com/arts.codes/"><img src="img/Instagram.png"> </a>
+            <a class="social" href="https://www.facebook.com/ArtsCodes-158330344691195/"><img src="img/Facebook.png"></a>
+            <a class="social" href="https://twitter.com/arts_codes"><img src="img/Twitter.png"></a>
+               </div>
+          </div>
+           </article>             
+        </main>
+        <!--<article class="img">
+           <div class="imgs"> 
+               <iframe src="https://player.vimeo.com/video/189958441" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <p>Image 1/3</p>
+                <cite><a href="https://vimeo.com/189958441">R. Luke DuBois: The Choice Is Yours / bitforms Gallery, NYC</a> from <a href="https://vimeo.com/vernissagetv">VernissageTV</a> on <a href="https://vimeo.com">Vimeo</a>.</cite>
+            </div>
+            <div class="imgs"> 
+               <img src="img/0.jpg">
+                <p>Image 2/3</p>
+                <cite>Newberry Source. G. de Anglia, Collection of Medieval Musical Treatises, ca. 1391.</cite>
+            </div>
+            <div class="imgs"> 
+               <img  src="img/1.jpg">
+                <p>Image 3/3</p>
+            </div>
+                <button class="left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="right" onclick="plusDivs(1)">&#10095;</button>
+            </article>-->
+        <nav id="vnav">
+            <ul>
+                <li><a id="vclose" href="#vcont">vol 0</a></li>
+                <ul id="vcont">
+                <li><a>vol 1</a></li>
+                <li><a href="#vclose">X</a></li>
+                </ul>
+            </ul>
+        </nav>
+        <script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("imgs");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+    </body>
+   </html>

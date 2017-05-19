@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>arts.codes</title>
+        <link rel="icon" href="img/artsdotcodeslogo.png" type="image/gif">
+        <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+     <link rel="stylesheet" type="text/css" href="style.css">
+     <link href="https://fonts.googleapis.com/css?family=Raleway:300,500,600" rel="stylesheet">
+  </head>
+    
+    <body>
+      <header>
+            <a href="../../../index.html">
+                <img id="logo" src="img/logo.png" alt="arts.codes">
+            </a>
+            <!--navigation made for html5 sturctured as seen below-->
+          <ul class="nav">
+           <li class="dropdown"><a>Articles</a>
+           <ul class="dropcont">
+               <li><a href="article.html">Calculating Music in the Middle Ages</a></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+           </ul>
+           </li>
+           <li><a href="../../../blog/blog.html">Blog</a></li>
+            <li><a href="../../../about/about.html" rel="author">About</a></li>
+              <li><a href="https://github.com/artsdotcodes">Framework</a></li>
+              <li><a href="../../../other/more.html">More</a></li>
+          </ul>
+      </header>
+      <img src="img/back.png" id="back" title="Previous"> <img src="img/forward.png" id="for" title="Next">
+       <main id="box">
+            <!--main content-->
+           <article class="text">
+               <p class="title">Game Trak DIY v0.1</p>
+               <div class="textwrap">
+               <iframe src="https://www.youtube.com/embed/tV66w9zij0Y" frameborder="0" allowfullscreen></iframe>
+                <ul id="equ"><b>Equiment</b>
+                <li>Standard Soldering Equipment</li>
+                <li>Hot Glue Gun</li>
+                <li>Pliers</li>
+                <li>Wire cutters / strippers</li>
+                <li>Heat source (lighter / air gun)</li>
+               </ul> 
+               <ul id="dow"><b>Downloads</b>
+                   <li><a href="https://www.arduino.cc/en/main/software">Arduino IDE</a></li>
+                   <li><a href="https://www.pjrc.com/teensy/td_download.html">Teencyduino</a></li>
+               </ul>
+               <ul id="par"><b>Parts</b>
+                <li>Teency LC</li>
+                <img src="img/teensylc_front_small.jpg">
+                <li>AndyMark String Pot (This can be DIY. Instructions on their website.)</li>
+                <img src="img/am-2674-2.jpg">
+                <li>Analog 2-axis Thumb Joystick</li>
+                <img src="img/512-05.jpg">
+                <li>Eye Screw (Crown Bolt #216 or matching)</li>
+                  <img src="img/IMG_20170113_154811.jpg">
+                   <li>Wire</li>
+                   <li>Shrink Wrap</li>
+                   <li>Hot Glue</li>
+                   <li>USB A to Micro B</li>
+               </ul>
+               <ol id="bud"><b>Build</b>
+               <li>Assemble the String Pot via instructions found here.</li>
+                   <li>Assemble the Joystick but leave off the thumb cap.</li>
+               <ul id="od">Wire, solder and shrink wrap the following connections:
+                   <li>Joystick X to Teency #14</li>
+                   <li>Joystick Y to Teency #15</li>
+                   <li>String Pot #2 to Teency #16</li>
+                   <li>Joystick Ground to  String Pot #3 to Teency Ground</li>
+                   <li>Joystick Vcc (or similar) to String Pot #1 to Teency 5V</li>
+                   </ul>
+                   <li>Bend the Eye Screweye 90 degrees.</li>
+                   <li>Screw the Eye Screw into tip of Joystick shaft.</li>
+                   <li>Use pliers to open Eye Screw a bit.</li>
+                   <li>Double loop string through Eye Screw.</li>
+                   <li>Use Pliers to close the Eye Screw.</li>
+                   <li>Hot glue the Joystick board to the String Pot as in the main photo.</li>
+                   <li>Note: You may want to hot glue the Teency to the string pot too.</li>
+                   <li>Upload Code below via the Arduino IDE</li>
+                   <li>Note: Instructions available at the link above.</li>
+                   <li>Calibrate Joystick X, Y, & Z axis via OS instructions.</li>
+               </ol>
+                <p><b>Code</b></p>
+               <code>/*Game Trak Example<br>
+               This example code is in the public domain. */<br>
+                void setup() {<br>
+                // configure the joystick to manual send mode.  This gives precise<br>
+                // control over when the computer receives updates, but it does<br>
+                // require you to manually call Joystick.send_now().<br>
+                Joystick.useManualSend(true);<br>
+                }<br>
+                void loop() {<br>
+                // read analog inputs and use them for the joystick axis<br>
+                Joystick.X(analogRead(0));<br>
+                Joystick.Y(analogRead(1));<br>
+                Joystick.Z(analogRead(2));<br>
+                // Because setup configured the Joystick manual send,<br>
+                // the computer does not see any of the changes yet.<br>
+                // This send_now() transmits everything all at once.<br>
+                Joystick.send_now();<br>
+                // a brief delay, so this runs “only” 200 times per second<br>
+                delay(5);<br>
+                }</code>               
+          </div>
+          <section class="credit">
+           <cite>Matthew Cordaro<br>Game Trak DIY v0.1<br>arts.codes Vol 0</cite><br> 
+           <time datetime="20017-12-01">January 12th 20017</time> 
+          </section>
+           </article>
+              <footer>
+           <ul class="fnav">
+            <li id="email"><a href="mailto:team@arts.codes?subject=Contact">team@arts.codes</a></li>
+            <li><a>s</a></li>
+            <li><a>s</a></li>
+            <li><a>s</a></li>
+            </ul>
+        </footer>
+        </main>
+        <nav id="vnav">
+            <ul>
+                <li><a id="vclose" href="#vcont">vol 0</a></li>
+                <ul id="vcont">
+                <li><a>vol 1</a></li>
+                <li><a href="#vclose">X</a></li>
+                </ul>
+            </ul>
+        </nav>
+    </body>
+   </html>
