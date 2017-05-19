@@ -137,7 +137,7 @@ header{
 #box{
     background-color: #ffffff;
     width: 40%;
-    height: 73vh;
+    height: 73.8vh;
     position: absolute;
     top: 5em;
     right: 0;
@@ -154,7 +154,7 @@ header{
     padding: 2.5em;
 }
 .title{
-    text-indent: 0;
+    text-indent: 0; 
     margin-bottom: 0;
     font-size: 3em;
     border-bottom: .01em solid;
@@ -290,6 +290,7 @@ p a{
     margin: 0;
     background-color: #000000;
     padding: 0;
+    z-index: 50;
 }
 
 #vnav ul{
@@ -369,12 +370,11 @@ p a{
 	#nav:hover .nav{
 		display: block;
 	} 
-    
     .img{
         position: relative;
         top: 5em;
         left: 0;
-        width: 90%;
+        width: 80%;
         height: 30%;
     }
     .imgs div{
@@ -382,13 +382,23 @@ p a{
     }
     .cwrap{
         position: relative;
-        top:0;
+        top: 0;
         right: 0;
+        width: 100%;
     }
     #box{
         position: relative;
-        bottom: 11em;
+        float: left;
+        margin-top: 2em;
         width: 100%;
         overflow-y: visible;
-    }  
+        padding-top: 0;
+    } 
+    .text{
+        margin: 0;
+        padding: .5em;
+    }
+    .title{
+        margin-top: .2em;
+    }
 }
