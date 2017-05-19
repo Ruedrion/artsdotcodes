@@ -154,13 +154,13 @@ footer{
     color: #000000;
 }
 #vnav{
+    font-family: 'Raleway', sans-serif;
     position: fixed;
     left: 0;
     bottom: 0;
     margin: 0;
     background-color: #000000;
     padding: 0;
-    font-family: 'Raleway', sans-serif;
 }
 
 #vnav ul{
@@ -175,7 +175,7 @@ footer{
 #vnav li a{
     color: #ffffff;
     display: block;
-    padding: .9em;
+    padding: .7em;
     text-decoration: none;
 }
 #vnav li a:hover{
@@ -207,25 +207,27 @@ footer{
 		display:inline-block;
 	}
 	#nav .nav, #nav:active .nav{ 
-		display: none;
+		display: block;
 		position: absolute;
 		background: #fff;
         padding: 0;
 		right: 1em;
-		top: 3.5em;
+		top: 5.5em;
 		width: 36%;
 	}
-    .nav .dropcont, .nav:active .dropcont{ 
-		position: absolute;
-		background: #fff;
+    .nav .dropcont, .nav:active .dropcont{
+        display: block;
+        position: relative;
+		background: #f7f6f6;
         padding: 0;
-		left: -13em;
-		top: 3.5em;
 		width: 100%;
 	}
+    .dropcont li a{
+        width: auto;
+    }
 	#nav li{
 		text-align: center;
-		width: 100%;
+		width: 95%;
 		padding: .1em 0;
 		margin: 0;
 	}
