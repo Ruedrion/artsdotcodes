@@ -13,7 +13,8 @@ body{
     height: 5em;
     background: url(../img/logo.png) no-repeat center;
     background-size: 11em 5em;
-	display: block; 
+	display: block;
+    z-index: 70;
 }
 #nav{
     float: right;
