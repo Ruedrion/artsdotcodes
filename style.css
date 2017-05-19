@@ -18,24 +18,22 @@ body{
 }
 #nav{
     float: right;
+    padding-top: .9em;
+    padding-right: 2.5em;
 }
-#navi {
+#navi{
 	display: hidden;
 	width: 40px;
 	height: 40px;
 	background: #000000 url(img/menu-icon.png) center;
 }
 
-a:hover#navi {
+a:hover#navi{
 	background-color: #575757;
 	border-radius: 4px 4px 0 0;
 }
 .nav{
-    top:0;
-    right: 0;
     list-style-type: none;
-    padding-right: 2.5em;
-    padding-top: .9em;
     margin: 0;
     background-color: #000000;
     font-family: 'Raleway', sans-serif;
@@ -54,7 +52,7 @@ a:hover#navi {
 .nav li a:hover{
     color: #585858;
 }
-.dropcont {
+.dropcont{
     display: none;
     position: absolute;
     padding: 0;
@@ -202,27 +200,37 @@ footer{
         padding: .8em;
         font-size: .9em;
     }
-    #navi {
+    #nav a{
+        color: #000000;
+    }
+    #navi{
 		display:inline-block;
 	}
-	#nav ul, #nav:active ul { 
-		display: none;
+	#nav .nav, #nav:active .nav{ 
+		display: block;
 		position: absolute;
-		padding: 20px;
 		background: #fff;
-		border: 5px solid #444;
-		right: 20px;
-		top: 60px;
-		width: 50%;
-		border-radius: 4px 0 4px 4px;
+        padding: 0;
+		right: 1em;
+		top: 3.5em;
+		width: 36%;
 	}
-	#nav li {
+    .nav .dropcont, .nav:active .dropcont{ 
+		display: block;
+		position: absolute;
+		background: #fff;
+        padding: 0;
+		left: -13em;
+		top: 3.5em;
+		width: 100%;
+	}
+	#nav li{
 		text-align: center;
 		width: 100%;
-		padding: 10px 0;
+		padding: .1em 0;
 		margin: 0;
 	}
-	#nav:hover ul {
+	#nav:hover .nav{
 		display: block;
 	} 
 }
