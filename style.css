@@ -207,16 +207,16 @@ footer{
 		display:inline-block;
 	}
 	#nav .nav, #nav:active .nav{ 
-		display: block;
+		display: none;
 		position: absolute;
 		background: #fff;
         padding: 0;
 		right: 1em;
-		top: 5.5em;
+		top: 3.5em;
 		width: 36%;
 	}
     .nav .dropcont, .nav:active .dropcont{
-        display: block;
+        display: none;
         position: relative;
 		background: #f7f6f6;
         padding: 0;
@@ -231,6 +231,9 @@ footer{
 		padding: .1em 0;
 		margin: 0;
 	}
+    .dropdown:hover .dropcont{
+        display: block;
+    }
 	#nav:hover .nav{
 		display: block;
 	} 
