@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>arts.codes</title>
+        <link rel="icon" href="img/artsdotcodeslogo.png" type="image/gif">
+        <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+     <link rel="stylesheet" type="text/css" href="style.css">
+     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:500|Playfair+Display|Raleway:300" rel="stylesheet">
+  </head>
+    
+    <body>
+      <header>
+            <a href="../../../index.html">
+                <img id="logo" src="img/logo.png" alt="arts.codes">
+            </a>
+          <ul class="nav">
+           <li class="dropdown"><a>Articles</a>
+           <ul class="dropcont">
+               <li><a href="../../../articles/vol0/article0/article.html">Calculating Music in the Middle Ages</a></li>
+               <li><a href="../../../articles/vol0/article1/article.html">Game Trak DIY v0.1</a></li>
+               <li><a href="../../../articles/vol0/article2/article.html">R. Luke Dubois</a></li>
+               <li><a></a></li>
+               <li><a></a></li>
+               <li><a></a></li>
+               <li><a></a></li>
+           </ul>
+           </li>
+           <li><a href="../../../blog/blog.html">Blog</a></li>
+            <li><a href="../../../about/about.html" rel="author">About</a></li>
+              <li><a href="https://github.com/artsdotcodes">Framework</a></li>
+              <li><a href="../../../other/more.html">More</a></li>
+          </ul>
+      </header>
+          
+          <div class="cwrap"> 
+             <div id="back" class="cpage">
+              <a href="../article1/article.html"><img src="img/back.png" title="Previous"><i>Previous</i></a>
+              </div>
+              <div id="for" class="cpage">
+              <a href="../article3/article.html"><img src="img/forward.png" title="Next"><i>Next</i></a>
+              </div>
+              </div>
+           <main id="box">
+            <!--main content-->
+            
+           <article class="text">
+             
+               <p class="title">R. Luke Dubois</p>
+               <p class="subhead">One of the most prolific artists working at the intersection of art and code today.</p>
+               <div class="textwrap">
+               <p>R. Luke Dubois is one of the most prolific artists working at the intersection of art and code today. His recent solo exhibition, The Choice is Yours, at Bitforms Gallery which ran from Oct. 26-December 23 explored Artificial Intelligence to create interactive sculptures. Dubois used actual voting machines from the 1940s-1960s to allow the audience to cast votes in response to questions which ran the gamut from the mundane to dadaesque.</p>
+
+            <p>In addition to the interactive voting machines, historical voting paraphernalia gives context to the work. Dubois originallythought he would hack the machines to create music boxes, but then decided to honor the original purpose of the machines and create a piece about decisions and voting. Each of the five different<quote class="popquote"><b>"With these machines Dubois has essentially created multimedia instruments"</b></quote> machines creates a different experience. One draws material from Clinton and Trump commercials and results in a one-minute video, while another scrapes text from Russolo’s Art of Noise to create a personalized piece of sound art. Each machine is not simply programmed to create the same response from the same input, they learned patterns of inputs and adjusted output throughout the course of the exhibition.</p> 
+
+            <p> The input itself is fascinating; instead of using the electrical signals to represent the mechanical impulses originally used to create the “vote” Dubois had to use computer vision and florescent nail polish to read the input. With these machines Dubois has essentially created multimedia instruments that you play by making decisions.  All art-making is essentially decision making, The Choice is Yours focuses the viewer/deciders attention on this task, and rewards the participant with algorithmically generated art. </p>
+
+             <section class="credit">
+           <cite>Margaret Anne Schedel<br>R. Luke Dubois<br>arts.codes Vol 0</cite><br> 
+           <time datetime="20017-12-01">January 12th 20017</time> 
+          </section>
+        <div Class="footer">
+            <a class="email" href="mailto:team@arts.codes?subject=Contact">team@arts.codes</a>
+            <a class="social" href="https://www.instagram.com/arts.codes/"><img src="img/Instagram.png"> </a>
+            <a class="social" href="https://www.facebook.com/ArtsCodes-158330344691195/"><img src="img/Facebook.png"></a>
+            <a class="social" href="https://twitter.com/arts_codes"><img src="img/Twitter.png"></a>
+               </div>
+          </div>
+           </article>             
+        </main>
+        <article class="img">
+           <div class="imgs"> 
+               <iframe src="https://player.vimeo.com/video/189958441" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <p>Image 1/3</p>
+                <cite><a href="https://vimeo.com/189958441">R. Luke DuBois: The Choice Is Yours / bitforms Gallery, NYC</a> from <a href="https://vimeo.com/vernissagetv">VernissageTV</a> on <a href="https://vimeo.com">Vimeo</a>.</cite>
+            </div>
+            <div class="imgs"> 
+               <img src="img/0.jpg">
+                <p>Image 2/3</p>
+                <cite>Newberry Source. G. de Anglia, Collection of Medieval Musical Treatises, ca. 1391.</cite>
+            </div>
+            <div class="imgs"> 
+               <img  src="img/1.jpg">
+                <p>Image 3/3</p>
+            </div>
+                <button class="left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="right" onclick="plusDivs(1)">&#10095;</button>
+            </article>
+        <nav id="vnav">
+            <ul>
+                <li><a id="vclose" href="#vcont">vol 0</a></li>
+                <ul id="vcont">
+                <li><a>vol 1</a></li>
+                <li><a href="#vclose">X</a></li>
+                </ul>
+            </ul>
+        </nav>
+        <script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("imgs");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+    </body>
+   </html>
