@@ -62,7 +62,7 @@ a:hover#navi{
     background-color: #ffffff;
     text-align: center;
     text-decoration: none;
-    padding: 2em;
+    padding: 1.5em;
     width: 10em;
     color: #000000
 }
@@ -86,50 +86,31 @@ header{
     width: 90%;
     min-height: 70%;
     position: absolute;
-    top: 8em;
+    top: 5em;
     left: 5%;
     right: 5%;
     padding-bottom: 6em;
 }
 
 .cwrapper{
-    margin: 3em;
-    height: 100%;
+    position: relative;
+    height: 80%;
     width 100%;
 }
-.cont{
-    position: relative;
-    float: left;
-    width:  25%;
-    height: 15em;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
+.cwrapper img{
+    display: block;
+    margin: auto;
+    Max-width: 80%;
+    height: auto;
 }
-.cont:hover .fade{
-    opacity: .7;
-    cursor: pointer;
-}
-.fade{
-    position: absolute;
-    top: 0;    
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #000000;
-}
-.text{
-    color: #ffffff;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+img[usemap] {
+		border: none;
+		height: auto;
+		max-width: 80%;
+		width: auto;
+	}
+.mob{
+    display: none;
 }
 footer{
     position: absolute;
@@ -237,4 +218,16 @@ footer{
 	#nav:hover .nav{
 		display: block;
 	} 
+    img[usemap] {
+		border: none;
+		height: auto;
+		max-width: 100%;
+		width: auto;
+	}
+    .cpu{
+        display: none;
+    }
+    .mob{
+        display: block;
+    }
 }

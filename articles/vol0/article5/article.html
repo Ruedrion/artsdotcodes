@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>arts.codes</title>
+        <link rel="icon" href="img/artsdotcodeslogo.png" type="image/gif">
+        <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+     <link rel="stylesheet" type="text/css" href="style.css">
+     <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:500|Playfair+Display|Raleway:300" rel="stylesheet">
+  </head>
+    
+    <body>
+      <header>
+          <a href="../../../index.html" id="logo"></a>
+           <nav id="nav">
+          <a id="navi"></a>
+          <ul class="nav">
+           <li class="dropdown"><a>Articles</a>
+           <ul class="dropcont">
+               <li><a href="../../../articles/vol0/article0/article.html">Calculating Music in the Middle Ages</a></li>
+               <li><a href="../../../articles/vol0/article1/article.html">Game Trak DIY v0.1</a></li>
+               <li><a href="../../../articles/vol0/article2/article.html">R. Luke Dubois</a></li>
+               <li><a href="../../../articles/vol0/article3/article.html">Allison Miller</a></li>
+               <li><a href="../../../articles/vol0/article4/article.html">Háček</a></li>
+               <li><a href="../../../articles/vol0/article5/article.html">Magenta 101</a></li>
+               <li><a href="../../../articles/vol0/article6/article.html">BabyCastles</a></li>
+           </ul>
+           </li>
+           <li><a href="../../../blog/blog.html">Blog</a></li>
+            <li><a href="../../../about/about.html" rel="author">About</a></li>
+              <li><a href="https://github.com/artsdotcodes">Framework</a></li>
+              <li><a href="../../../other/more.html">More</a></li>
+          </ul>
+          </nav>
+      </header>
+              <article class="img">
+            <div class="imgs"> 
+               <div style="background-image:url('img/0.png')">
+                </div>
+                <p>Image 1/2</p>
+                <cite>Newberry Source. G. de Anglia, Collection of Medieval Musical Treatises, ca. 1391.</cite>
+            </div>
+            <div class="imgs"> 
+               <div style="background-image:url('img/1.png')">
+                </div>
+                <p>Image 2/2</p>
+                <cite>Newberry Source. G. de Anglia, Collection of Medieval Musical Treatises, ca. 1391.</cite>
+            </div>
+                <button class="left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="right" onclick="plusDivs(1)">&#10095;</button>
+            </article>
+           <main id="box">
+            <!--main content-->
+            <div class="cwrap"> 
+             <div id="back" class="cpage">
+              <a href="../article4/article.html"><img src="img/back.png" title="Previous"><i>Previous</i></a>
+              </div>
+              <div id="for" class="cpage">
+              <a href="../article6/article.html"><img src="img/forward.png" title="Next"><i>Next</i></a>
+              </div>
+              </div>
+           <article class="text">
+             
+               <p class="title">Magenta 101</p>
+               <p class="subhead">Magenta is a project from the Google Brain team that asks: Can we use machine learning to create compelling art and music? If so, how? If not, why not?</p>
+               <div class="textwrap">
+               <p>This article will walk you through the steps of setting up a Magenta environment, generating some musical material, and then arranging the material into a traditional song form. Thankfully, the Magenta team has made this process relatively straightforward, but fair warning: this tutorial lwill require the use of the command line.</p>
+
+            <p><quote class="sub">From Tensorflow to Magenta</quote><br>Google Brain is a deep learning research project that began in 2011 at Google. The team had been interested in using deep learning techniques to crack the problem of artificial intelligence since 2006, and in 2011 began collaborating to build a large-scale deep learning software system on top of Google’s cloud computing infrastructure.
+            The second generation ‘Deep Learning’ outcome from this team was TensorFlow.
+            </p> 
+
+            <p><quote class="sub">TensorFlow</quote><br>Today, TensorFlow is an open source software library for machine learning in various kinds of perceptual and language understanding tasks. It is currently used for both research and production by many different teams in several commercial Google products, such as speech recognition, Gmail, Google Photos, and search. </p>
+
+            <p><quote class="sub">Magenta</quote><br>Magenta is a specific implementation of the TensorFlow software library with the goal of being able to generate art and music. Understanding a little bit about the powerful tool which Magenta is built upon (TensorFlow) will help steer your creative goals for working with this software.</p>
+
+            <p><quote class="sub">Setting Up Your Environment</quote><br>There are several ways to access the Magenta source code and to get started generating new musical material, but this article will focus on the simplest and most effective method, with Docker.</p> 
+
+            <p><quote class="sub">WTF is Docker?</quote><br>The environment (of a host machine) can cause a great deal of frustration during software development. In particular, your operating system, or the version of Python you have installed, all impact what the source code expects to see on your machine. In order to solve this problem, developers have turned to solutions which contain and isolate their production and deployment environments. Enter Docker. You are likely familiar with Virtual Machines, which allow software developers to write and deploy their code to a stable environment. Docker takes the virtual machine concept and fragments it into smaller pieces which do not need to be replicated. This allows many applications to run in a virtual environment which all share the same base OS kernel. Because of this, Docker is a cross-platform solution for developing mission critical software that will run exactly the same in all Docker environemnts.</p>
+           
+            <p><quote class="sub">Installing Docker</quote><br>Docker Engine is supported on Linux, Cloud, Windows, and macOS. In this tutorial I’ll be using macOS, so please refer to the following guide <a href="https://docs.docker.com/engine/installation/">here</a> for installing Docker on your host OS.</p>
+            
+            <p><quote class="sub">Command Line:Acquiring the Magenta Docker Image</quote><br>
+                Once docker is installed and you’ve rebooted your machine it should be running on your system. You can hover or click on the Docker icon in your tray and you should see a green light indicating Docker is running. It may take a few minutes upon installing in order to get the green light.
+                First, let’s make a folder on our machine to hold our Magenta files. I’m going to make my folder on the desktop and name it ‘magenta’. Note: macOS format below.
+
+            </p>
+            <code>mkdir ~/Desktop/magenta</code>
+            <p>Next, open the terminal (or PowerShell on Windows) and execute the following command in order to download the Magenta Docker Image and run it for the first time.</p>
+            <code>docker run -it -p 6006:6006 -v ~/Desktop/magenta:/magenta-data tensorflow/magenta</code>
+            <p></p>
+            <code></code>
+            <p>Once you submit the previous line, the Magenta Docker image will begin downloading. This is a 3.7gb~ image, so grab a cup of coffee and wait for the command line to come to a rest. While this is happening, let’s break down the previous line we just submitted to the terminal. To exit a docker shell session type exit and hit return.</p>
+            <p>The <code>docker run </code>command instructs docker to run the image which is passed in as argument, in this case<code>tensorflow/magenta.</code>Docker maintains a registry of images, so when<code>tensorflow/magenta </code>is passed as an argument, the registry looks for the latest image and begins downloading it to your system. The -it property instructs docker to run this image with an interactive terminal. This will place you inside<quote class="popquote"><b>WARNING: only data saved in <code>/magenta-data</code> will persist across Docker sessions.</b></quote> the command line (shell) of the image, which will allow you to pass commands to magenta. The<code>-p</code>property requests docker to open ports, and the argument <code>6006:6006 </code>is passed, which requests a 1:1 mapping of the image port and the host port. This allows the docker image and the host machine to communicate with one another seamlessly. Lastly, the -v property instructs docker to mount a volume, and the argument we passed,<code>~/Desktop/magenta:/magenta-data mounts a folder from the host at ~/Desktop/magenta to the docker image at /magenta-data. </code>Note: Windows users can change <code>~/Desktop/magenta</code><code>C:/magenta.</code></p>
+            <p><quote class="sub">Generating Melodies</quote><br>Once the docker image has been downloaded it will start a shell in a directory with all the Magenta components compiled, installed, and ready to run. This will allow us to tap into the pre-trained models and generate melodies without any further configuration. Let’s try that now!
+            Enter the following command in your Docker 
+            <code>tensorflow/magenta </code>shell:</p>
+            <code>melody_rnn_generate \<br>
+            –config=lookback_rnn \<br>
+            –bundle_file=/magenta-models/lookback_rnn.mag \<br>
+            –output_dir=/magenta-data/lookback_rnn/generated \<br>
+            –num_outputs=10 \<br>
+            –num_steps=128 \<br>
+            –primer_melody=”[60]”
+            </code>
+            <p>Let’s discuss the previous command.<code> melody_rnn_generate</code> is a package that generates midi files from a recurrent neural network (rnn) model. In this example, we indicated the configuration as <code>lookback_rnn</code>, pointed it to an existing model as the bundle_file <code>/magenta-models/lookback_rnn.mag</code>, specified the number of files to generate with <code>num_outputs=10</code>, specified the number of notes each melody will have with <code>num_steps=128</code> and gave it a primer melody of “<code>[60]</code>”, which is the midi note for middle ‘C’. Lastly, we specified an output directory of <code>/magenta-data/lookback_rnn/generated.</code>
+            Once this command is executed successfully, you should see the following message in your shell:
+            </p>
+            
+            <code>INFO:tensorflow:Wrote 10 MIDI files to /magenta-data/lookback_rnn/generated</code>
+            <p>Now we can navigate to our ~/Desktop/Magenta directory and we should see the output directory generated from the previous command. Your folder structure should resemble the following:</p>
+            <code>magenta<br>
+            └───lookback_rnn<br>
+            │   └───generated<br>
+            │       │   2017-01-17_153656_01.mid<br>
+            │       │   2017-01-17_153656_02.mid<br>
+            │       │   ...<br>
+            │       │   2017-01-17_153656_10.mid</code>
+            <p><quote class="sub">MIDI Playback</quote><br>If you have QuickTime 7 (old version) or Logic Pro X (or a similar DAW) you can open these files and take a listen. If not, I recommend downloading <a href="http://ariamaestosa.sourceforge.net/download.html">Aria Maestosa</a> which is a cross-platform midi sequencer/editor.</p>
+            <p><quote class="sub">Coercing Magenta To Generate Song Materials</quote><br>Now that you’ve got your environment setup to generate melodies with Magenta, we can think about how to break this material down into the individual segments which make up a song.</p>
+            <p><quote class="sub">Song structure</quote><br>
+
+Song structure or the musical forms of songs in traditional music are typically sectional with repeated material. Other common forms include thirty-two-bar form, verse-chorus form, and the twelve-bar blues. Popular music songs traditionally use the same music for each verse or stanza of lyrics (as opposed to songs that are "through-composed", an approach used in classical music).<br>
+
+The most common format is intro, verse, pre-chorus, chorus (or refrain), verse, pre-chorus, chorus, bridge ("middle eight"), verse, chorus and outro. Let's break down each of these components to strategize about how to generate materials for each.<br><br>
+<quote class="sub">Intro</quote><br>
+
+The introduction is a section that comes at the beginning of the piece. It usually builds up suspense for the listener so when the downbeat drops in, it creates a release or surprise. In some cases, an introduction contains only drums or percussion parts which set the rhythm and "groove" for the song. Alternately the introduction may consist of a solo sung by the lead singer (or a group of backup singers), or played by an instrumentalist.<br><br>
+<quote class="sub">Verse</quote><br>
+
+In popular music, a verse roughly corresponds to a poetic stanza because it consists of rhyming lyrics most often with an AABB or ABAB rhyme scheme. When two or more sections of the song have almost identical music and different lyrics, each section is considered one verse.<br><br>
+<quote class="sub">Pre-chorus</quote><br>
+
+An optional section that may occur after the verse is the "pre-chorus." Also referred to as a "build", "channel," or "transitional bridge," the pre-chorus functions to connect the verse to the chorus with intermediary material, typically using subdominant or similar transitional harmonies.<br><br>
+<quote class="sub">Chorus</quote><br>
+
+The chorus contains the main idea, or big picture, of what is being expressed lyrically and/or musically. It is repeated throughout the song, and the melody and lyric rarely vary. It is almost always of greater musical and emotional intensity than the verse.<br><br>
+<quote class="sub">Bridge</quote><br>
+
+A bridge may be "a transition", but more often in popular music is "a section that contrasts with the verse. In music theory, "middle eight" (a common type of bridge) refers to the section of a song which has a significantly different melody and lyrics, which helps the song develop itself in a natural way by creating a contrast to the previously played, usually placed after the second chorus in a song.<br><br>
+<quote class="sub">Outro</quote><br>
+
+The conclusion or outro of a song is a way of ending or completing the song. For example, through a fade-out or instrumental tag.</p>
+           
+            <p><quote class="sub">Song Structure - Numbers Breakdown</quote><br>
+            We'll be following a common song structure guideline to help us establish the length of each section.
+
+            You may recall reviewing the earlier generated melodic material in your software or DAW of choice. You may have noticed that the <code>num_steps=128</code> argument resulted in a melody that was 8 measures (or bars) in duration, with a common time (4/4) subdivision. We are going to take that knowledge to map out our song structure.
+
+            First, let's create some folders in our <code>~/Desktop/magenta/lookback_rnn/</code> directory. We'll create a folder for each section of musical material. Note: since the pre-chorus is optional, we won't be using it in this article.</p>
+
+            <code>kdir ~/Desktop/magenta/lookback_rnn/intro \<br>
+                mkdir ~/Desktop/magenta/lookback_rnn/verse \<br>
+                mkdir ~/Desktop/magenta/lookback_rnn/chorus \<br>
+            mkdir ~/Desktop/magenta/lookback_rnn/bridge \<br>
+            mkdir ~/Desktop/magenta/lookback_rnn/outro \</code>
+            <p>Now that we have these directories, we can start generating material to fill them. Our song will have the following structure.</p>
+            
+            <code>Intro 	2 Bars<br>
+                Verse 	4 Bars<br>
+            Chorus 	4 Bars<br>
+            Verse 	4 Bars<br>
+            Chorus 	4 Bars<br>
+            Bridge 	8 Bars<br>
+            Chorus 	4 Bars<br>
+            Chorus 	4 Bars<br>
+            Outro 	2 Bars</code>
+            <p><quote class="sub">Intro - 2 bars - 4 voices</quote><br>
+            The intro will be 2 bars long, which means that it will need 1/4 of the steps (<code>32</code>) we indicated in our original melody(<code>128</code>).
+            We'll also need to adjust the output_dir to indicate our <code>~/Desktop/magenta/lookback_rnn/intro</code> folder.
+            Lastly, we'll adjust the <code>num_outputs</code> to be <code>4</code>, one for each voice of our four part orchestration. At this point we can begin loosly thinking about these outputs as Melody, Harmony 1, Harmony 2, and Bass. How you assign the output will be up to you, but beginning to listen with ears that are seeking the various characteristics of these voices is important.
+            Let's generate our Intro with the following command (inside of the Docker shell):</p>
+                   <code>melody_rnn_generate \<br>
+                   --config=lookback_rnn \<br>
+                   --bundle_file=/magenta-models/lookback_rnn.mag \<br>
+                   --output_dir=/magenta-data/lookback_rnn/intro \<br>
+                   --num_outputs=4 \<br>
+                   --num_steps=32 \<br>
+                   --primer_melody="[60]"</code>
+                   <p>Head on over to your <code>.../intro</code> folder to examine your output. You should see 4 midi files each with 2 bars of materials. At this point, I like to listen to each one. You'll notice that some are far more active then others. I tend to take the most active line and tag it as the melody in my DAW. I'll then take the second most active line with the widest range, transpose it down 2 octaves, and tag it as the bass. Lastly, I will label the least active lines as harmony and decide if they need any transposition. If too many of the lines are occupying the same pitch space, consider transposing them 4 or 7 half steps to create a triad. If your melody is still not standing on it's own, you may want to transpose it up an octave.
+                   Once you have a 4 voice intro you like, we can proceed to the next section. For fun, <a href="https://www.dropbox.com/s/9dyodmc6mk1p3fz/01_Intro.mp3?dl=0">here's</a> an example of the intro I just assembled while writing this article.
+                   Let's proceed generating the material for the remain sections in a similar fashion.</p>
+                   <p><quote class="sub">Chorus - 4 bars - 4 voices</quote><br>
+                   <code>melody_rnn_generate \<br>
+                   --config=lookback_rnn \<br>
+                   --bundle_file=/magenta-models/lookback_rnn.mag \<br>
+                    --output_dir=/magenta-data/lookback_rnn/chorus \<br>
+                    --num_outputs=4 \<br>
+                    --num_steps=64 \<br>
+                    --primer_melody="[60]"</code></p>
+            <p><quote class="sub">Bridge - 8 bars - 4 voices</quote><br>
+            <code>melody_rnn_generate \<br>
+            --config=lookback_rnn \<br>
+            --bundle_file=/magenta-models/lookback_rnn.mag \<br>
+            --output_dir=/magenta-data/lookback_rnn/bridge \<br>--num_outputs=4 \<br>
+            --num_steps=128 \<br>
+            --primer_melody="[60]"</code></p>
+            
+            <p><quote class="sub">Outro - 2 bars - 4 voices</quote><br>
+            <code>melody_rnn_generate \<br>
+            --config=lookback_rnn \<br>
+            --bundle_file=/magenta-models/lookback_rnn.mag \<br>
+            --output_dir=/magenta-data/lookback_rnn/outro \<br>
+            --num_outputs=4 \<br>
+            --num_steps=32 \<br>
+            --primer_melody="[60]"</code></p>
+            
+            <p><quote class="sub">Assembling Your Song</quote><br>Now that we have all of our materials generated we can begin assembling our song.</p>
+            <p><quote class="sub">Now that we have all of our materials generated we can begin assembling our song.</quote><br></p>
+            <p><quote class="sub">Step 1: Adjust the Voices of Each section</quote><br>Just as we stepped through our materials for the intro to tag and transpose each voice to more closely resemble a typical four part ensemble, we need to do the same for each of our remaining sections.</p>
+            <p><quote class="sub">Step 2: Organize and Assemble</quote><br>Now that you have your materials you simply must lay them out in the song format structure.</p>
+            <p><quote class="sub">Step 3: Tweak and Share!</quote><br>You may have finished assembling your song and you think it's still missing something. Now's your chance to modify the materials you've assembled, adding or subtracting instruments, adding percussion, adjusting voices, etc. This is the fun part.
+
+            <a href="https://www.dropbox.com/s/hzf8vtsqkwrpf4u/Magenta_Song.mp3?dl=0">Here's</a> an example of a finished track that I've made following this guide.</p>
+            <p><quote class="sub"></quote><br></p>
+            
+             <section class="credit">
+           <cite>Timothy Vallier<br>Magenta 101<br>arts.codes Vol 0</cite><br> 
+           <time datetime="20017-12-01">January 12th 20017</time> 
+          </section>
+        <div Class="footer">
+            <a class="email" href="mailto:team@arts.codes?subject=Contact">team@arts.codes</a>
+            <a class="social" href="https://www.instagram.com/arts.codes/"><img src="img/Instagram.png"> </a>
+            <a class="social" href="https://www.facebook.com/ArtsCodes-158330344691195/"><img src="img/Facebook.png"></a>
+            <a class="social" href="https://twitter.com/arts_codes"><img src="img/Twitter.png"></a>
+               </div>
+          </div>
+           </article>             
+        </main>
+        <nav id="vnav">
+            <ul>
+                <li><a id="vclose" href="#vcont">vol 0</a></li>
+                <ul id="vcont">
+                <li><a href="../../../index.html">vol 1</a></li>
+                <li><a href="#vclose">X</a></li>
+                </ul>
+            </ul>
+        </nav>
+        <script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("imgs");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+    </body>
+   </html>

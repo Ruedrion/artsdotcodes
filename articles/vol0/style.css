@@ -1,0 +1,240 @@
+body{
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+}
+#logo{
+    float: left;
+    width: 11em;
+    height: 5em;
+    background: url(img/logo.png) no-repeat center;
+    background-size: 11em 5em;
+	display: block;
+    z-index: 70;
+}
+#nav{
+    float: right;
+    padding-top: .9em;
+    padding-right: 2.5em;
+}
+#navi{
+	display: hidden;
+	width: 40px;
+	height: 40px;
+	background: #000000 url(img/menu-icon.png) center;
+}
+
+a:hover#navi{
+	background-color: #575757;
+	border-radius: 4px 4px 0 0;
+}
+.nav{
+    list-style-type: none;
+    margin: 0;
+    background-color: #000000;
+    font-family: 'Raleway', sans-serif;
+}
+.nav li{
+    display: inline-block;
+}
+.nav li a{
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1.4em 1em 1.4em .5em;
+    text-align: center;
+    cursor: pointer;
+}
+.nav li a:hover{
+    color: #585858;
+}
+.dropcont{
+    display: none;
+    position: absolute;
+    padding: 0;
+    list-style-type: none;
+}
+.dropcont li a{
+    background-color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    padding: 2em;
+    width: 10em;
+    color: #000000
+}
+.dropdown:hover .dropcont{
+    display: block;
+}
+#active a{
+    color: #6074a2;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    width: 100%;
+    height: 5em; 
+    z-index: 50;
+}
+#box{
+    background-color: #ffffff;
+    width: 90%;
+    min-height: 70%;
+    position: absolute;
+    top: 8em;
+    left: 5%;
+    right: 5%;
+    padding-bottom: 6em;
+}
+
+.cwrapper{
+    margin: 3em;
+    height: 100%;
+    width 100%;
+}
+.cont{
+    position: relative;
+    float: left;
+    width:  25%;
+    height: 15em;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cont:hover .fade{
+    opacity: .7;
+    cursor: pointer;
+}
+.fade{
+    position: absolute;
+    top: 0;    
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #000000;
+}
+.text{
+    color: #ffffff;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    height: 5em;
+    width: 100%;
+    background-color: #ffffff;
+    text-align: center;
+}
+.social{
+    display: inline-block;
+    position: relative;
+    top: .8em;
+}
+.social img{
+    width: 2.3em;
+}
+.email{
+    padding: 1em;
+    border-right: .02em solid;
+    text-decoration: none;
+    color: #000000;
+}
+#vnav{
+    font-family: 'Raleway', sans-serif;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    background-color: #000000;
+    padding: 0;
+}
+
+#vnav ul{
+    list-style-type: none;
+    margin: 0;
+    padding:0
+} 
+#vnav li{
+    display: inline-block;
+    font-size: .9em;
+}
+#vnav li a{
+    color: #ffffff;
+    display: block;
+    padding: .7em;
+    text-decoration: none;
+}
+#vnav li a:hover{
+    color: #6074a2;
+}
+#vcont{
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+#vcont:target{
+    display: inline-block;
+}
+#vclose:target #vcont{
+    display: none;
+}
+@media only screen and (max-width : 700px) {
+    header{
+        position: absolute;
+    }
+    #nav{
+        padding: .8em;
+        font-size: .9em;
+    }
+    #nav a{
+        color: #000000;
+    }
+    #navi{
+		display:inline-block;
+	}
+	#nav .nav, #nav:active .nav{ 
+		display: none;
+		position: absolute;
+		background: #fff;
+        padding: 0;
+		right: 1em;
+		top: 3.5em;
+		width: 36%;
+	}
+    .nav .dropcont, .nav:active .dropcont{
+        display: none;
+        position: relative;
+		background: #f7f6f6;
+        padding: 0;
+		width: 100%;
+	}
+    .dropcont li a{
+        width: auto;
+    }
+	#nav li{
+		text-align: center;
+		width: 95%;
+		padding: .1em 0;
+		margin: 0;
+	}
+    .dropdown:hover .dropcont{
+        display: block;
+    }
+	#nav:hover .nav{
+		display: block;
+	} 
+}

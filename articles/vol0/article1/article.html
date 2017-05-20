@@ -36,39 +36,28 @@
           </ul>
           </nav>
       </header>
-      <img src="img/back.png" id="back" title="Previous"> <img src="img/forward.png" id="for" title="Next">
-       <main id="box">
-            <!--main content-->
-           <article class="text">
-               <p class="title">Game Trak DIY v0.1</p>
-               <div class="textwrap">
-               <iframe src="https://www.youtube.com/embed/tV66w9zij0Y" frameborder="0" allowfullscreen></iframe>
+      <article class="img">
+            <div class="imgs">
+                <iframe src="https://www.youtube.com/embed/tV66w9zij0Y" frameborder="0" allowfullscreen></iframe>
+                <p>Image 1/3</p>
+            </div>
+            <div class="imgs">
                 <ul id="equ"><b>Equiment</b>
                 <li>Standard Soldering Equipment</li>
                 <li>Hot Glue Gun</li>
                 <li>Pliers</li>
                 <li>Wire cutters / strippers</li>
                 <li>Heat source (lighter / air gun)</li>
-               </ul> 
+               </ul>
                <ul id="dow"><b>Downloads</b>
                    <li><a href="https://www.arduino.cc/en/main/software">Arduino IDE</a></li>
                    <li><a href="https://www.pjrc.com/teensy/td_download.html">Teencyduino</a></li>
                </ul>
-               <ul id="par"><b>Parts</b>
-                <li>Teency LC</li>
-                <img src="img/teensylc_front_small.jpg">
-                <li>AndyMark String Pot (This can be DIY. Instructions on their website.)</li>
-                <img src="img/am-2674-2.jpg">
-                <li>Analog 2-axis Thumb Joystick</li>
-                <img src="img/512-05.jpg">
-                <li>Eye Screw (Crown Bolt #216 or matching)</li>
-                  <img src="img/IMG_20170113_154811.jpg">
-                   <li>Wire</li>
-                   <li>Shrink Wrap</li>
-                   <li>Hot Glue</li>
-                   <li>USB A to Micro B</li>
-               </ul>
-               <ol id="bud"><b>Build</b>
+               <p>Image 2/3</p>
+            </div>
+            
+               <div class="imgs">
+                <ol id="bud"><b>Build</b>
                <li>Assemble the String Pot via instructions found here.</li>
                    <li>Assemble the Joystick but leave off the thumb cap.</li>
                <ul id="od">Wire, solder and shrink wrap the following connections:
@@ -89,7 +78,41 @@
                    <li>Note: Instructions available at the link above.</li>
                    <li>Calibrate Joystick X, Y, & Z axis via OS instructions.</li>
                </ol>
-                <p><b>Code</b></p>
+               <p>Image 3/3</p>
+            </div>
+            <button class="left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="right" onclick="plusDivs(1)">&#10095;</button>
+        </article>
+       <main id="box">
+           <div class="cwrap"> 
+             <div id="back" class="cpage">
+              <a href="../article0/article.html"><img src="img/back.png" title="Previous"><i>Previous</i></a>
+              </div>
+              <div id="for" class="cpage">
+              <a href="../article2/article.html"><img src="img/forward.png" title="Next"><i>Next</i></a>
+              </div>
+              </div>
+            <!--main content-->
+           <article class="text">
+               <p class="title">Game Trak DIY v0.1</p>
+               <p class="subhead">Gametrak is a brand of 3-dimensional game control systems based on position tracking, designed for home video game platforms such as video game consoles and personal computers.</p>
+               <div class="textwrap">
+                <p class="subhead"><b>Parts</b></p>
+                 <ul id="par">
+                <li>Teency LC</li>
+                <img src="img/teensylc_front_small.jpg">
+                <li>AndyMark String Pot (This can be DIY. Instructions on their website.)</li>
+                <img src="img/am-2674-2.jpg">
+                <li>Analog 2-axis Thumb Joystick</li>
+                <img src="img/512-05.jpg">
+                <li>Eye Screw (Crown Bolt #216 or matching)</li>
+                  <img src="img/IMG_20170113_154811.jpg">
+                   <li>Wire</li>
+                   <li>Shrink Wrap</li>
+                   <li>Hot Glue</li>
+                   <li>USB A to Micro B</li>
+               </ul>
+                <p class="subhead"><b>Code</b></p>
                <code>/*Game Trak Example<br>
                This example code is in the public domain. */<br>
                 void setup() {<br>
@@ -109,30 +132,48 @@
                 Joystick.send_now();<br>
                 // a brief delay, so this runs “only” 200 times per second<br>
                 delay(5);<br>
-                }</code>               
-          </div>
-          <section class="credit">
+                }</code>
+                <section class="credit">
            <cite>Matthew Cordaro<br>Game Trak DIY v0.1<br>arts.codes Vol 0</cite><br> 
            <time datetime="20017-12-01">January 12th 20017</time> 
           </section>
-           </article>
-              <footer>
-           <ul class="fnav">
-            <li id="email"><a href="mailto:team@arts.codes?subject=Contact">team@arts.codes</a></li>
-            <li><a>s</a></li>
-            <li><a>s</a></li>
-            <li><a>s</a></li>
-            </ul>
-        </footer>
+           
+              <div Class="footer">
+            <a class="email" href="mailto:team@arts.codes?subject=Contact">team@arts.codes</a>
+            <a class="social" href="https://www.instagram.com/arts.codes/"><img src="img/Instagram.png"> </a>
+            <a class="social" href="https://www.facebook.com/ArtsCodes-158330344691195/"><img src="img/Facebook.png"></a>
+            <a class="social" href="https://twitter.com/arts_codes"><img src="img/Twitter.png"></a>
+               </div>               
+          </div>
+          </article>
         </main>
         <nav id="vnav">
             <ul>
                 <li><a id="vclose" href="#vcont">vol 0</a></li>
                 <ul id="vcont">
-                <li><a>vol 1</a></li>
+                <li><a href="../../../index.html">vol 1</a></li>
                 <li><a href="#vclose">X</a></li>
                 </ul>
             </ul>
         </nav>
+        <script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("imgs");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
     </body>
    </html>

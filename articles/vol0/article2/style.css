@@ -82,6 +82,73 @@ header{
     height: 5em; 
     z-index: 50;
 }
+.img{
+    position: absolute;
+    top: 5em;
+    width: 49%;
+    height: 81.9vh;
+    left: 3.2em;
+    padding: 2em;
+    background-color: #ffffff;
+}
+.imgs{
+    display: block;
+    margin: auto;
+    padding: 0;
+    margin: 0;
+}
+.imgs img{
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+.imgs iframe{
+    width: 100%;
+    height: 37em;
+}
+.imgs p{
+    float: right;
+    width: 12%;
+    margin: 0;
+    padding: 0;
+    font-size: .9em;
+    font-family: 'Raleway', sans-serif;
+}
+.imgs cite{
+    float: left;
+    min-width: 85%;
+    font-style: italic;
+    font-family: 'Raleway', sans-serif;
+}
+.imgs cite a{
+    text-decoration: none;
+    color: #575757;
+}
+.img button{
+    cursor: pointer;
+    background-color: #000000;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    padding: 16px;
+    font-size: 1.4em;
+    color: #ffffff;
+    border: none;
+    z-index: 40;
+}
+.right{
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+.left{
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+.credit{
+    border-top: .001em solid;
+    font-size: .9em;
+}
 .cwrap{
     position: fixed;
     top:5em;
@@ -189,78 +256,6 @@ p a{
     padding: .5em;
     text-align: left;
     color: #6074a2;
-}
-.img{
-    position: absolute;
-    top: 5em;
-    width: 49%;
-    height: 81.9vh;
-    left: 3.2em;
-    padding: 2em;
-    background-color: #ffffff;
-}
-.imgs{
-    display: block;
-    margin: auto;
-    padding: 0;
-    margin: 0;
-}
-.imgs img{
-    display: block;
-    margin: auto;
-    max-width: 100%;
-}
-.imgs iframe{
-    width: 100%;
-    height: 37em
-}
-.imgs p{
-    float: right;
-    width: 12%;
-    margin: 0;
-    padding: 0;
-    font-size: .9em;
-    font-family: 'Raleway', sans-serif;
-}
-.imgs cite{
-    float: left;
-    min-width: 85%;
-    font-style: italic;
-    font-family: 'Raleway', sans-serif;
-}
-.imgs cite a{
-    text-decoration: none;
-    color: #575757;
-}
-.img button{
-    cursor: pointer;
-    background-color: #000000;
-    filter: alpha(opacity=50);
-    opacity: 0.5;
-    padding: 16px;
-    font-size: 1.4em;
-    color: #ffffff;
-    border: none;
-    z-index: 40;
-}
-.right{
-    position: absolute;
-    top: 50%;
-    right: 0;
-}
-.left{
-    position: absolute;
-    top: 50%;
-    left: 0;
-}
-.quote{
-    font-size: .9em;
-    text-align: left;
-    text-indent: 0;
-}
-.credit{
-    border-top: .001em solid;
-    font-size: .9em;
 }
 .footer{
     position:relative;
